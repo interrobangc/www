@@ -52,9 +52,6 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#team">Team</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#devops">DevOps</a>
-            </li>
           </ul>
         </div>
       </div>
@@ -66,7 +63,7 @@
         <div class="intro-text">
           <div class="intro-lead-in">Just another bootstrap website.</div>
           <div class="intro-heading text-uppercase">But it has better DevOps than you.</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#devops">Tell Me How</a>
+          <a class="btn btn-primary btn-xl text-uppercase" data-toggle="modal" href="#serviceModalDevops">Tell Me How</a>
         </div>
       </div>
     </header>
@@ -82,27 +79,33 @@
         </div>
         <div class="row text-center">
           <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-code fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Software</h4>
+            <a class="service-link" data-toggle="modal" href="#serviceModalSoftware">
+              <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+              </span>
+              <h4 class="service-heading">Software</h4>
+            </a>
             <p class="text-muted">We'll get your project started on the right foot, triage your code for DevOps improvements, or help your team resolve that pesky blocker.</p>
           </div>
           <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">DevOps</h4>
+            <a class="service-link" data-toggle="modal" href="#serviceModalDevops">
+              <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
+              </span>
+              <h4 class="service-heading">DevOps</h4>
+            </a>
             <p class="text-muted">It's hard to find time to clean up or plan your CI process when you have deadlines to meet. We'll take care of that for you.</p>
           </div>
           <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-server fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Systems</h4>
+            <a class="service-link" data-toggle="modal" href="#serviceModalSystems">
+              <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                <i class="fa fa-server fa-stack-1x fa-inverse"></i>
+              </span>
+              <h4 class="service-heading">Systems</h4>
+            </a>
             <p class="text-muted">We'll design cost effective, highly available systems to run all of that software and DevOps tooling that we helped you create.</p>
           </div>
         </div>
@@ -178,143 +181,6 @@
         </div>
     </section>
 
-    <!-- About -->
-    <section id="devops">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">How We Do DevOps</h2>
-            <h3 class="section-subheading text-muted">This site probably does DevOps better than yours.</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <ul class="timeline">
-              <li>
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/code.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Code</h4>
-                    <h4 class="subheading">It all starts with code.</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">We start by understanding and optimizing code. Great DevOps starts with great code. We are developers who understand systems, not the other way around.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/source_control.png" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Source Control</h4>
-                    <h4 class="subheading">Keep track of that great code.</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">In this case we are using <a href="https://github.com/interrobangc/www" target="_blank">github</a>, but we can help you integrate our systems with bitbucket or gitlab just as easily. What&#8253; You aren't using git yet&#8253; We'll help you migrate.</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/branches.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Branches</h4>
-                    <h4 class="subheading">You gotta keep it separated.</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">If you don't have a plan when it you start branching, things are going to go wrong. For this site we use simple feature branches that are merged directly into master. We can help you plan a branching structure that is exactly as complex as necessary to meet the requirements of your process.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/local_testing.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Local Testing</h4>
-                    <h4 class="subheading">Don't commit bad code.</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">We use docker containers to create disposable local environments that duplicate production. They can be created, destroyed, and recreated in seconds. We love quick running lint and smoke tests in pre-commit hooks.</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/automated_testing.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Automated Testing</h4>
-                    <h4 class="subheading">Don't merge bad code.</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">Before pull requests are merged, they are tested automatically and peer reviewed. For this site we use simple testing in cloud.docker.com to test our pull requests. We are fans of <a href="https://github.com/drone/drone" target="_blank">drone.io</a> for projects that requires a more complex test system.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/build.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Build</h4>
-                    <h4 class="subheading">Automatic and interactive.</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">Some builds need to be automatic. Some builds need to be manually triggered. On this site, commits to master are automatically built and deployed to our staging environment. Commits tagged "www" are built and deployed to the production environment. Using tags makes rollbacks a breeze.</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/deploy.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Deploy</h4>
-                    <h4 class="subheading">Put code where it goes.</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">When code is built, it should go where it is supposed to. This site uses Docker Cloud to automatically deploy new images to services on an AWS based docker swarm.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/notify.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Notify</h4>
-                    <h4 class="subheading">The team knows what is going on.</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">We use integrations and custom bots to make sure that our slack channels are updated with pertinent information for anything that goes right or wrong in our DevOps processes.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <h4>Does your
-                    <br>system do
-                    <br>all of this&#8253;</h4>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -348,6 +214,184 @@
         </div>
       </div>
     </footer>
+
+    <!-- Service Modals -->
+
+    <!-- Service Software Modal -->
+    <div class="service-modal modal fade" id="serviceModalSoftware" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service DevOps Modal -->
+    <div class="service-modal modal fade" id="serviceModalDevops" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">How We Do DevOps</h2>
+                <h3 class="section-subheading text-muted">This site probably does DevOps better than yours.</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <ul class="timeline">
+                  <li>
+                    <div class="timeline-image">
+                      <img class="rounded-circle img-fluid" src="img/about/code.jpg" alt="">
+                    </div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                        <h4>Code</h4>
+                        <h4 class="subheading">It all starts with code.</h4>
+                      </div>
+                      <div class="timeline-body">
+                        <p class="text-muted">We start by understanding and optimizing code. Great DevOps starts with great code. We are developers who understand systems, not the other way around.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="timeline-inverted">
+                    <div class="timeline-image">
+                      <img class="rounded-circle img-fluid" src="img/about/source_control.png" alt="">
+                    </div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                        <h4>Source Control</h4>
+                        <h4 class="subheading">Keep track of that great code.</h4>
+                      </div>
+                      <div class="timeline-body">
+                        <p class="text-muted">In this case we are using <a href="https://github.com/interrobangc/www" target="_blank">github</a>, but we can help you integrate our systems with bitbucket or gitlab just as easily. What&#8253; You aren't using git yet&#8253; We'll help you migrate.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="timeline-image">
+                      <img class="rounded-circle img-fluid" src="img/about/branches.jpg" alt="">
+                    </div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                        <h4>Branches</h4>
+                        <h4 class="subheading">You gotta keep it separated.</h4>
+                      </div>
+                      <div class="timeline-body">
+                        <p class="text-muted">If you don't have a plan when it you start branching, things are going to go wrong. For this site we use simple feature branches that are merged directly into master. We can help you plan a branching structure that is exactly as complex as necessary to meet the requirements of your process.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="timeline-inverted">
+                    <div class="timeline-image">
+                      <img class="rounded-circle img-fluid" src="img/about/local_testing.jpg" alt="">
+                    </div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                        <h4>Local Testing</h4>
+                        <h4 class="subheading">Don't commit bad code.</h4>
+                      </div>
+                      <div class="timeline-body">
+                        <p class="text-muted">We use docker containers to create disposable local environments that duplicate production. They can be created, destroyed, and recreated in seconds. We love quick running lint and smoke tests in pre-commit hooks.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="timeline-image">
+                      <img class="rounded-circle img-fluid" src="img/about/automated_testing.jpg" alt="">
+                    </div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                        <h4>Automated Testing</h4>
+                        <h4 class="subheading">Don't merge bad code.</h4>
+                      </div>
+                      <div class="timeline-body">
+                        <p class="text-muted">Before pull requests are merged, they are tested automatically and peer reviewed. For this site we use simple testing in cloud.docker.com to test our pull requests. We are fans of <a href="https://github.com/drone/drone" target="_blank">drone.io</a> for projects that requires a more complex test system.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="timeline-inverted">
+                    <div class="timeline-image">
+                      <img class="rounded-circle img-fluid" src="img/about/build.jpg" alt="">
+                    </div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                        <h4>Build</h4>
+                        <h4 class="subheading">Automatic and interactive.</h4>
+                      </div>
+                      <div class="timeline-body">
+                        <p class="text-muted">Some builds need to be automatic. Some builds need to be manually triggered. On this site, commits to master are automatically built and deployed to our staging environment. Commits tagged "www" are built and deployed to the production environment. Using tags makes rollbacks a breeze.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="timeline-image">
+                      <img class="rounded-circle img-fluid" src="img/about/deploy.jpg" alt="">
+                    </div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                        <h4>Deploy</h4>
+                        <h4 class="subheading">Put code where it goes.</h4>
+                      </div>
+                      <div class="timeline-body">
+                        <p class="text-muted">When code is built, it should go where it is supposed to. This site uses Docker Cloud to automatically deploy new images to services on an AWS based docker swarm.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="timeline-inverted">
+                    <div class="timeline-image">
+                      <img class="rounded-circle img-fluid" src="img/about/notify.jpg" alt="">
+                    </div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                        <h4>Notify</h4>
+                        <h4 class="subheading">The team knows what is going on.</h4>
+                      </div>
+                      <div class="timeline-body">
+                        <p class="text-muted">We use integrations and custom bots to make sure that our slack channels are updated with pertinent information for anything that goes right or wrong in our DevOps processes.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="timeline-inverted">
+                    <div class="timeline-image">
+                      <h4>Does your
+                        <br>system do
+                        <br>all of this&#8253;</h4>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Systems Modal -->
+    <div class="service-modal modal fade" id="serviceModalSystems" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
