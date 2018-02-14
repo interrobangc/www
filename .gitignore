@@ -1,0 +1,17 @@
+# IDE
+.buildpath
+.idea
+.project
+.settings
+nbproject
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.directory
+.DS_Store
+Desktop.ini
+Thumbs.db
+
+# Sass
+*.css.map

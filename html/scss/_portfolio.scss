@@ -73,8 +73,8 @@
 .service-modal {
   padding-right: 0px !important;
   .modal-dialog {
-    margin: 1rem;
-    max-width: 100vw;
+    margin: 1rem auto;
+    max-width: 1140px;
   }
   .modal-content {
     padding: 100px 0;
@@ -101,6 +101,15 @@
     }
     button {
       cursor: pointer;
+    }
+    section {
+      @include section;
+      &:first-of-type {
+        padding: 0;
+      }
+      .timeline-heading {
+        @extend .timeline-heading;
+      }
     }
   }
   .close-modal {
