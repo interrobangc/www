@@ -1,7 +1,7 @@
 // Global styling for this template
 body {
-  overflow-x: hidden;
   @include body-font;
+  overflow-x: hidden;
 }
 
 p {
@@ -11,9 +11,10 @@ p {
 a {
   color: $black;
   outline: none;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+
   &:hover {
     /*color: darken($primary, 15%);*/
     color: $primary;
@@ -31,14 +32,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
   @include heading-font;
+  font-weight: 700;
 }
 
 section {
   @include section;
 }
-@media(min-width:768px) {
+
+@media(min-width: 768px) {
   section {
     padding: 150px 0;
   }
@@ -58,16 +60,18 @@ section {
 .btn-primary {
   background-color: $primary;
   border-color: $primary;
+
   &:active,
   &:focus,
   &:hover {
     background-color: darken($primary, 7.5%) !important;
     border-color: darken($primary, 7.5%) !important;
-    color: white;
+    color: $white;
   }
+
   &:active,
   &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55,.5) !important;
+    box-shadow: 0 0 0 .2rem $shadow !important;
   }
 }
 
@@ -82,10 +86,12 @@ section {
   text-shadow: none;
 }
 
-img::selection {
-  background: transparent;
-}
+img {
+  ::selection {
+    background: transparent;
+  }
 
-img::-moz-selection {
-  background: transparent;
+  ::-moz-selection {
+    background: transparent;
+  }
 }

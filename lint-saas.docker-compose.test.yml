@@ -1,0 +1,4 @@
+sut:
+  image: interrobangc/sass-lint
+  volumes:
+    - ./:/app
