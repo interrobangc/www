@@ -291,6 +291,16 @@ header.masthead .intro-text .intro-heading {
   padding: 100px 0;
   text-align: center;
 }
+.service-modal .modal-content .modal-image {
+  margin-left: 500;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  color: #fff;
+  border: 7px solid #e9ecef;
+  border-radius: 100%;
+  background-color: #fed136;
+}
 .service-modal .modal-content h2 {
   font-size: 3em;
   margin-bottom: 15px;
