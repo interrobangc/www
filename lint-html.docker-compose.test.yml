@@ -1,0 +1,5 @@
+sut:
+  image: interrobangc/htmllint
+  volumes:
+    - ./:/app
+  command: htmllint html/index.html

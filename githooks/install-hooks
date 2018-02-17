@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+MY_PATH=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd -P)
+HOOK_PATH=${MY_PATH}/../.git/hooks
+
+if [ ! -h ${HOOK_PATH}/pre-commit ];then
+	echo "setting up pre-commit hook";
+    if [ ! -d ${HOOK_PATH} ];then
+        mkdir ${HOOK_PATH}
+    fi
+	ln -s ${MY_PATH}/pre-commit ${HOOK_PATH}/pre-commit;
+fi

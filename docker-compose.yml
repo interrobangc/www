@@ -1,0 +1,16 @@
+version: "3.2"
+
+services:
+  www:
+    image: interrobangc/www
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./:/var/www/interrobang.consulting
+
+  sass:
+    image: interrobangc/sass
+    volumes:
+      - ./html:/app
+    command: sass --style expanded --watch scss/interrobang.scss:css/interrobang.css

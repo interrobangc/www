@@ -3,7 +3,7 @@
 @mixin background-cover {
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
+  -o-background-size: cover; // sass-lint:disable-line no-misspelled-properties
   background-size: cover;
 }
 
@@ -19,4 +19,24 @@
 }
 @mixin heading-font {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+// Custom Mixins
+@mixin section {
+  padding: 100px 0;
+
+  h2.section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  h3.section-subheading {
+    @include serif-font;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 75px;
+    text-transform: none;
+  }
 }
