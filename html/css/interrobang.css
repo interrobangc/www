@@ -383,6 +383,7 @@ header.masthead .intro-text .intro-heading {
   list-style: none;
   position: relative;
   padding: 0;
+  margin-bottom: 0 !important;
 }
 .timeline::before {
   position: absolute;
@@ -394,10 +395,13 @@ header.masthead .intro-text .intro-heading {
   content: '';
   background-color: #e9ecef;
 }
+.timeline:last-child::before {
+  background-color: transparent;
+}
 .timeline > li {
   position: relative;
   min-height: 50px;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 .timeline > li::after, .timeline > li::before {
   display: table;
@@ -482,7 +486,7 @@ header.masthead .intro-text .intro-heading {
   }
   .timeline > li {
     min-height: 100px;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
   }
   .timeline > li .timeline-panel {
     float: left;
