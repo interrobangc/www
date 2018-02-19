@@ -461,6 +461,7 @@ header.masthead .intro-text .intro-heading {
   border-left-width: 0;
 }
 .timeline > li:last-child {
+  background-color: #fff;
   margin-bottom: 0;
 }
 .timeline .service-modal .modal-content section .timeline-heading h4, .service-modal .modal-content section .timeline .timeline-heading h4 {
