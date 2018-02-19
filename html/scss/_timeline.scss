@@ -3,7 +3,6 @@
   list-style: none;
   position: relative;
   padding: 0;
-  margin-bottom: 0 !important;
 
   &::before {
     position: absolute;
@@ -16,14 +15,10 @@
     background-color: $gray-200;
   }
 
-  &:last-child::before {
-    background-color: transparent;
-  }
-
   > li {
     position: relative;
     min-height: 50px;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 
     &::after,
     &::before {
@@ -130,7 +125,7 @@
 
     > li {
       min-height: 100px;
-      padding-bottom: 100px;
+      margin-bottom: 100px;
 
       .timeline-panel {
         float: left;
