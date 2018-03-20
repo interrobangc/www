@@ -20,6 +20,12 @@ A container running [sass](https://github.com/sass/sass) in watch mode runs alon
 
 Run `make lint` to perform on demand linting. The `make` command will configure a pre-commit hook in your local repository that will block commits that do not pass the lint tests.
 
+Tests will be run automatically by drone and docker cloud on push and PR creation.
+
+## Staging
+
+The staging environment is managed using git tags. Git tags with the prefix `stage-` will be tested and deployed to the GKE staging cluster by drone. For instance, the git tag `stage-test` will be deployed to <https://test.interrobang.consulting>.
+
 ## Make Commands
 
 * `make sass` - Manually run sass conversion.

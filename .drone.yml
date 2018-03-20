@@ -1,0 +1,52 @@
+pipeline:
+  htmllint:
+    image: interrobangc/htmllint
+    commands:
+      - htmllint html/index.html
+
+  sasslint:
+    image: interrobangc/sass-lint
+
+  docker:
+    image: plugins/docker
+    repo: interrobangc/www
+    tags:
+      - ${DRONE_TAG=default}
+    secrets: [ docker_username, docker_password ]
+
+    when:
+      event: tag
+      branch: refs/tags/stage-*
+
+  gke:
+    image: nytimes/drone-gke
+    zone: us-east1-b
+    cluster: staging
+    namespace: ${DRONE_TAG=default}
+    expand_env_vars: true
+    vars:
+      image: interrobangc/www:${DRONE_TAG=default}
+      app: www
+      env: ${DRONE_TAG##stage-}
+      commit: ${DRONE_COMMIT}
+    secrets:
+      - source: GOOGLE_CREDENTIALS
+        target: token
+
+    when:
+      event: tag
+      branch: refs/tags/stage-*
+
+  slack:
+    image: plugins/slack
+    channel: www
+    username: drone
+    secrets: [ slack_webhook ]
+
+    template: >
+      *{{ build.status }}* <{{ build.link }}|{{ repo.owner }}/{{ repo.name }}#{{ truncate build.commit 8}}> ({{ build.branch }}) by {{ build.author }} in {{ since build.started }}
+      `{{ truncate build.commit 8 }}` - {{ build.message }}
+
+    when:
+      status: [ success, failure ]
+      event: [push, tag]

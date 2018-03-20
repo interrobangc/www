@@ -1,0 +1,55 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+
+metadata:
+  name: {{.app}}-{{.env}}
+
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: {{.app}}
+        env: {{.env}}
+    spec:
+      containers:
+        - name: {{.app}}
+          image: {{.image}}
+          ports:
+            - containerPort: 80
+          env:
+            - name: COMMIT
+              value: {{.commit}}
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{.app}}-{{.env}}
+  labels:
+    apps: {{.app}}-{{.env}}
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+
+  selector:
+    app: {{.app}}
+    env: {{.env}}
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+  name: {{.app}}-{{.env}}
+spec:
+  rules:
+    - host: "{{.env}}.interrobang.consulting"
+      http:
+        paths:
+          - backend:
+              serviceName: {{.app}}-{{.env}}
+              servicePort: http
