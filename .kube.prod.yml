@@ -53,3 +53,47 @@ spec:
           - backend:
               serviceName: {{.app}}-{{.env}}
               servicePort: http
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+  name: {{.app}}-{{.env}}-prod
+spec:
+  rules:
+    - host: "interrobang.consulting"
+      http:
+        paths:
+          - backend:
+              serviceName: {{.app}}-{{.env}}
+              servicePort: http
+---
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{.app}}-{{.env}}
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1beta1
+    kind: Deployment
+    name: {{.app}}-{{.env}}
+  minReplicas: {{.min_replicas}}
+  maxReplicas: {{.max_replicas}}
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      targetAverageUtilization: 50
+  - type: Pods
+    pods:
+      metricName: packets-per-second
+      targetAverageValue: 1k
+  - type: Object
+    object:
+      metricName: requests-per-second
+      target:
+        apiVersion: extensions/v1beta1
+        kind: Ingress
+        name: {{.app}}-{{.env}}
+      targetValue: 10k

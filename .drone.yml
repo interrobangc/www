@@ -7,7 +7,7 @@ pipeline:
   sasslint:
     image: interrobangc/sass-lint
 
-  docker:
+  docker-stage:
     image: plugins/docker
     repo: interrobangc/www
     tags:
@@ -18,7 +18,7 @@ pipeline:
       event: tag
       branch: refs/tags/stage-*
 
-  gke:
+  gke-stage:
     image: nytimes/drone-gke
     zone: us-east1-b
     cluster: staging
@@ -28,6 +28,7 @@ pipeline:
       image: interrobangc/www:${DRONE_TAG=default}
       app: www
       env: ${DRONE_TAG##stage-}
+      replicas: 1
       commit: ${DRONE_COMMIT}
     secrets:
       - source: GOOGLE_CREDENTIALS
@@ -36,6 +37,40 @@ pipeline:
     when:
       event: tag
       branch: refs/tags/stage-*
+
+  docker-prod:
+    image: plugins/docker
+    repo: interrobangc/www
+    tags:
+      - www
+    secrets: [ docker_username, docker_password ]
+
+    when:
+      event: tag
+      branch: refs/tags/www
+
+  gke-prod:
+    image: nytimes/drone-gke
+    template: .kube.prod.yml
+    zone: us-east1-b
+    cluster: staging
+    namespace: www
+    expand_env_vars: true
+    vars:
+      image: interrobangc/www:${DRONE_TAG=default}
+      app: www
+      env: www
+      replicas: 2
+      min_replicas: 2
+      max_replicas: 6
+      commit: ${DRONE_COMMIT}
+    secrets:
+      - source: GOOGLE_CREDENTIALS
+        target: token
+
+    when:
+      event: tag
+      branch: refs/tags/www
 
   slack:
     image: plugins/slack
