@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Custom fonts for this template -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -47,7 +47,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+              <a class="nav-link js-scroll-trigger" href="#cto">Fractional CTO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Technical Services</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#team">Team</a>
@@ -62,19 +65,77 @@
       <div class="container">
         <div class="intro-text">
           <div class="intro-lead-in">Just another bootstrap website.</div>
-          <div class="intro-heading text-uppercase">But it has better DevOps than you.</div>
-          <a class="btn btn-primary btn-xl text-uppercase" data-toggle="modal" href="#service-modal-devops">Tell Me How</a>
+          <div class="intro-heading text-uppercase">But the team behind<br>it is remarkable.</div>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#cto">Tell Me More</a>
         </div>
       </div>
     </header>
 
+<!-- Fractional CTO -->
+    <section id="cto">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-uppercase">Fractional CTO</h2>
+            <h3 class="section-subheading text-muted">
+              We provide fractional CTO services that come with the support of an existing team. This allows us to make progress toward your goals with minimal ramp up time. Our team can take your startup from 0 to 10 or from 10 to 100.
+            </h3>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-4">
+            <a class="cto-link" data-toggle="modal" href="#cto-modal-staffing">
+              <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-handshake fa-stack-1x fa-inverse"></i>
+              </span>
+              <h4 class="cto-heading">Staffing</h4>
+              <p class="text-muted">
+                We'll help you hire, train, and keep the technical staff and consultants required to efficiently achieve your growth
+                goals.
+              </p>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a class="cto-link" data-toggle="modal" href="#cto-modal-planning">
+              <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-chart-line fa-stack-1x fa-inverse"></i>
+              </span>
+              <h4 class="cto-heading">Planning</h4>
+              <p class="text-muted">
+                A startup's journey is rarely direct. Their pace is rarely steady. Making the right moves at the right time means the difference
+                between success and failure. We'll keep you on track.
+              </p>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a class="cto-link" data-toggle="modal" href="#cto-modal-triage">
+              <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-stethoscope fa-stack-1x fa-inverse"></i>
+              </span>
+              <h4 class="cto-heading">Triage</h4>
+              <p class="text-muted">
+                It is impossible to do everything right while moving at a startup's pace. We'll help you fix your technical and organizational
+                problems.
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Services -->
-    <section id="services">
+    <section class="bg-light" id="services">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Services</h2>
-            <h3 class="section-subheading text-muted">We design software, processes, and infrastructures that get out of the way and let empowered developers and system engineers do what they do best.</h3>
+            <h2 class="section-heading text-uppercase">Technical Services</h2>
+            <h3 class="section-subheading text-muted">
+              We design software, processes, and infrastructures that get out of the way and let
+              empowered developers and system engineers do what they do best.
+            </h3>
           </div>
         </div>
         <div class="row text-center">
@@ -85,7 +146,10 @@
                 <i class="fa fa-code fa-stack-1x fa-inverse"></i>
               </span>
               <h4 class="service-heading">Software</h4>
-              <p class="text-muted">We'll get your project started on the right foot, triage your code for DevOps improvements, or help your team resolve that pesky blocker.</p>
+              <p class="text-muted">
+                We'll get your project started on the right foot, triage your code for DevOps
+                improvements, or help your team resolve that pesky blocker.
+              </p>
             </a>
           </div>
           <div class="col-md-4">
@@ -95,7 +159,10 @@
                 <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
               </span>
               <h4 class="service-heading">DevOps</h4>
-              <p class="text-muted">It's hard to find time to clean up, plan, or implement your CI process when you have deadlines. We'll take care of that for you.</p>
+              <p class="text-muted">
+                It's hard to find time to clean up, plan, or implement your CI process when you have
+                deadlines. We'll take care of that for you.
+              </p>
             </a>
           </div>
           <div class="col-md-4">
@@ -105,7 +172,10 @@
                 <i class="fa fa-server fa-stack-1x fa-inverse"></i>
               </span>
               <h4 class="service-heading">Systems</h4>
-              <p class="text-muted">We'll design cost effective, highly available systems to run all of that software and DevOps tooling that we helped you create.</p>
+              <p class="text-muted">
+                We'll design cost effective, highly available systems to run all of that software
+                and DevOps tooling that we helped you create.
+              </p>
             </a>
           </div>
         </div>
@@ -113,7 +183,7 @@
     </section>
 
     <!-- Team -->
-    <section class="bg-light" id="team">
+    <section id="team">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -125,7 +195,7 @@
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="https://media.interrobang.consulting/team/milo.jpg" alt="">
               <h4>Milo Schuman</h4>
-              <p class="text-muted">Full Stack Developer</p>
+              <p class="text-muted">Senior Full Stack Developer</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="https://github.com/miloschuman" target="_blank">
@@ -144,7 +214,7 @@
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="https://media.interrobang.consulting/team/bo.jpg" alt="">
               <h4>Robert Bo Davis</h4>
-              <p class="text-muted">Software/DevOps Architect</p>
+              <p class="text-muted">Founder &amp; CTO</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="https://github.com/robert-bo-davis" target="_blank">
@@ -163,7 +233,7 @@
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="https://media.interrobang.consulting/team/brendan.jpg" alt="">
               <h4>Brendan Murphy</h4>
-              <p class="text-muted">Project Manager/Jr. Engineer</p>
+              <p class="text-muted">Full Stack Engineer</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="https://github.com/brendan-mur" target="_blank">
@@ -201,7 +271,14 @@
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="https://media.interrobang.consulting/team/posha.jpg" alt="">
               <h4>Posha</h4>
-              <p class="text-muted">CEO</p>
+              <p class="text-muted">Founder &amp; CEO</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="https://www.facebook.com/poshin.tang" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="col-sm-4">
@@ -228,7 +305,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="bg-light">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -261,8 +338,274 @@
       </div>
     </footer>
 
-    <!-- Service Modals -->
+    <!-- CTO Modals -->
+    <!-- CTO Staffing Modal -->
+    <div class="cto-modal modal fade" id="cto-modal-staffing" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <section>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h2 class="section-heading text-uppercase">Build the right team</h2>
+                  <h3 class="section-subheading text-muted">Hire, train, and keep an effective technical staff.</h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="timeline">
+                    <li>
+                      <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="https://media.interrobang.consulting/cto/identify_needs.jpg" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>Identify Needs</h4>
+                          <h4 class="subheading">Job descriptions aren't easy.</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">
+                            Technical staffing must start with a clear understanding of technical needs and goals. Once we research and understand your projects, goals, and technology roadmap, we use that understanding to define the roles you need to fill and plan the right time to fill them.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-inverted">
+                      <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="https://media.interrobang.consulting/cto/hire.jpg" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>Hire and Vet</h4>
+                          <h4 class="subheading">The right person for the right job.</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">
+                            Selecting and vetting technical employees requires intimate knowledge of the requirements of the position. We can
+                            help you find, interview, and vet the staff that you actually need.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="https://media.interrobang.consulting/cto/train.jpg" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>Train</h4>
+                          <h4 class="subheading">Help staff be effective.</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">
+                            Once the right staff is in place, it is a constant challenge to keep everyone up to speed. This challenge is exacerbated
+                            by the extreme pace of progress experienced by a startup. We'll implement processes to make sure no one gets left behind.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-inverted">
+                      <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="https://media.interrobang.consulting/cto/reduce_turnover.jpg" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>Reduce Turnover</h4>
+                          <h4 class="subheading">Keep the right staff.</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">
+                            Keeping the right staff is as important as finding them. The average employee tenure for a startup is staggeringly low. We
+                            can help you take steps now and in the future to keep the staff that you need.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="https://media.interrobang.consulting/cto/review.jpg" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>Review</h4>
+                          <h4 class="subheading">Ensure staff is effective.</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">
+                            Performance evaluation for technical staff requires a deep understanding of the work they are doing and the needs of your team. We evaluate skill, growth, and team dynamics frequently.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
 
+    <!-- CTO Planning Modal -->
+    <div class="cto-modal modal fade" id="cto-modal-planning" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <section>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h2 class="section-heading text-uppercase">Strategic and tactical</h2>
+                  <h3 class="section-subheading text-muted">Set the right realistic goals. Define a roadmap to achieve them. Then do it.</h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="timeline">
+                    <li>
+                      <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="https://media.interrobang.consulting/cto/strategic.jpg" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>Strategic</h4>
+                          <h4 class="subheading">Define where and why.</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">
+                            We provide the technical know-how to help you define where your company is going and why.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-inverted">
+                      <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="https://media.interrobang.consulting/cto/tactical.jpg" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>Tactical</h4>
+                          <h4 class="subheading">Define how.</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">
+                            Once we define where you are going and why, the real work begins. We'll help you determine how best to get there and how to be adaptable along the way.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="https://media.interrobang.consulting/cto/adaptable.jpg" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>Adaptable</h4>
+                          <h4 class="subheading">Overcome all roadblocks.</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">
+                            Deviation from the original plan is inevitable. We'll help you adapt to a change in course, get back on course, and decide which approach is correct.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTO Triage Modal -->
+    <div class="cto-modal modal fade" id="cto-modal-triage" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <section>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h2 class="section-heading text-uppercase">The emergency room</h2>
+                  <h3 class="section-subheading text-muted">Fix the right broken things in the right order.</h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="timeline">
+                    <li>
+                      <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="https://media.interrobang.consulting/cto/identify.jpg" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>Identify</h4>
+                          <h4 class="subheading">Figure out what is broken.</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">
+                            Processes, staff, software, and systems will all break at some point. We'll help you identify what's broken and how badly.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-inverted">
+                      <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="https://media.interrobang.consulting/cto/sort.jpg" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>Sort</h4>
+                          <h4 class="subheading">Fix things in the right order.</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">
+                            Once you know what is broken, you must correctly determine when it should be fixed. We'll help you fix problems in the most efficient order.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="https://media.interrobang.consulting/cto/heal.jpg" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>Heal</h4>
+                          <h4 class="subheading">Don't fix symptoms. Heal disease.</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">
+                            We have the knowledge, skill, and experience required to discover and solve the root cause of your problems.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Modals -->
     <!-- Service Software Modal -->
     <div class="service-modal modal fade" id="service-modal-software" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
@@ -289,11 +632,14 @@
                       </div>
                       <div class="timeline-panel">
                         <div class="timeline-heading">
-                          <h4>Planning</h4>
+                          <h4>Well-Planned</h4>
                           <h4 class="subheading">Great code starts with a great plan.</h4>
                         </div>
                         <div class="timeline-body">
-                          <p class="text-muted">We have the varied experience with assorted languages and technologies necessary to help you choose the right language, frameworks, and storage system to achieve your goals.</p>
+                          <p class="text-muted">
+                            We have the experience with diverse languages and technologies necessary to help
+                            you choose the right language, framework, and storage system to achieve your goals.
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -303,11 +649,15 @@
                       </div>
                       <div class="timeline-panel">
                         <div class="timeline-heading">
-                          <h4>Standards</h4>
+                          <h4>With Standards</h4>
                           <h4 class="subheading">Keep everything nice and tidy.</h4>
                         </div>
                         <div class="timeline-body">
-                          <p class="text-muted">Whether you are a starting a new project or revamping a legacy application, we can help you architect your software, standards, and processes to achieve maintainability and increase productivity.</p>
+                          <p class="text-muted">
+                            Whether you are a starting a new project or revamping an existing application, we
+                            can help you architect your software, standards, and processes to achieve
+                            maintainability and increase productivity.
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -317,11 +667,52 @@
                       </div>
                       <div class="timeline-panel">
                         <div class="timeline-heading">
-                          <h4>Scalability</h4>
+                          <h4>Scalable</h4>
                           <h4 class="subheading">Too much growth can hurt.</h4>
                         </div>
                         <div class="timeline-body">
-                          <p class="text-muted">If your product is taking off and you need help scaling to meet the demand, we would love to take some pressure off of your team by offering our extensive experience with scalability issues.</p>
+                          <p class="text-muted">
+                            If your product is taking off and you need help scaling to meet the demand, we would
+                            love to take some pressure off of your team. We have extensive experience designing
+                            software that performs at scale.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-inverted">
+                      <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="https://media.interrobang.consulting/services/maintainable.jpg" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>Maintainable</h4>
+                          <h4 class="subheading">Incomprehensible is broken.</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">
+                            If you can't come back in a month, quarter, or year and quickly modify existing code,
+                            progress will eventually slow to a crawl. If it takes new hires months to become
+                            productive, you are are burning money. We can help you avoid or mitigate pitfalls
+                            that lead to problems later.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="https://media.interrobang.consulting/services/future_proof.jpg" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>Future-Proof</h4>
+                          <h4 class="subheading">What you do now must work later.</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">
+                            Predicting all future goals is impossible. It takes a lot of experience
+                            and planning to avoid painting yourself into a corner. We have the requisite
+                            experience.
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -360,11 +751,14 @@
                       </div>
                       <div class="timeline-panel">
                         <div class="timeline-heading">
-                          <h4>Code</h4>
+                          <h4>Code-Centric</h4>
                           <h4 class="subheading">It all starts with code.</h4>
                         </div>
                         <div class="timeline-body">
-                          <p class="text-muted">We start by understanding and optimizing code. Great DevOps starts with great code. We are developers who understand systems, not the other way around.</p>
+                          <p class="text-muted">
+                            We start by understanding and optimizing code. Great DevOps starts with great code.
+                            We are developers who understand systems, not the other way around.
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -378,7 +772,11 @@
                           <h4 class="subheading">Keep track of that great code.</h4>
                         </div>
                         <div class="timeline-body">
-                          <p class="text-muted">In this case we are using <a href="https://github.com/interrobangc/www" target="_blank">github</a>, but we can help you integrate our systems with bitbucket or gitlab just as easily. What&#8253; You aren't using git yet&#8253; We'll help you migrate.</p>
+                          <p class="text-muted">
+                            In this case we are using <a href="https://github.com/interrobangc/www" target="_blank">github</a>,
+                            but we can help you integrate our systems with bitbucket or gitlab just as easily.
+                            You aren't using git yet&#8253; We'll help you migrate.
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -389,10 +787,15 @@
                       <div class="timeline-panel">
                         <div class="timeline-heading">
                           <h4>Branches</h4>
-                          <h4 class="subheading">You gotta keep it separated.</h4>
+                          <h4 class="subheading">Keep it separated.</h4>
                         </div>
                         <div class="timeline-body">
-                          <p class="text-muted">If you don't have a plan when it you start branching, things are going to go wrong. For this site we use simple feature branches that are merged directly into master. We can help you plan a branching structure that is exactly as complex as necessary to meet the requirements of your process.</p>
+                          <p class="text-muted">
+                            If you don't have a plan when it you start branching, things are going to go wrong.
+                            For this site we use simple feature branches that are merged directly into master.
+                            We can help you plan a branching structure that is exactly as complex as necessary
+                            to meet the requirements of your process.
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -406,7 +809,11 @@
                           <h4 class="subheading">Don't commit bad code.</h4>
                         </div>
                         <div class="timeline-body">
-                          <p class="text-muted">We use docker containers to create disposable local environments that duplicate production. They can be created, destroyed, and recreated in seconds. We love quick running lint and smoke tests in pre-commit hooks.</p>
+                          <p class="text-muted">
+                            We use docker containers to create disposable local environments that duplicate
+                            production. They can be created, destroyed, and recreated in seconds. We love
+                            quick running lint and smoke tests in pre-commit hooks.
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -420,7 +827,11 @@
                           <h4 class="subheading">Don't merge bad code.</h4>
                         </div>
                         <div class="timeline-body">
-                          <p class="text-muted">Before pull requests are merged, they are tested automatically and peer reviewed. For this site we use simple testing in cloud.docker.com to test our pull requests. We are fans of <a href="https://github.com/drone/drone" target="_blank">drone.io</a> for projects that requires a more complex test system.</p>
+                          <p class="text-muted">
+                            Before pull requests are merged, they are tested automatically and peer reviewed.
+                            For this site we use <a href="https://github.com/drone/drone" target="_blank">drone.io</a>
+                            to test, build, and deploy code.
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -434,7 +845,10 @@
                           <h4 class="subheading">Automatic and interactive.</h4>
                         </div>
                         <div class="timeline-body">
-                          <p class="text-muted">Some builds need to be automatic. Some builds need to be manually triggered. On this site, commits to master are automatically built and deployed to our staging environment. Commits tagged "www" are built and deployed to the production environment. Using tags makes rollbacks a breeze.</p>
+                          <p class="text-muted">
+                            After testing, <a href="https://github.com/drone/drone" target="_blank">drone.io</a> builds
+                            docker images to be deployed to our GKE cluster.
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -448,7 +862,13 @@
                           <h4 class="subheading">Put code where it goes.</h4>
                         </div>
                         <div class="timeline-body">
-                          <p class="text-muted">When code is built, it should go where it is supposed to. This site uses Docker Cloud to automatically deploy new images to services on an AWS based docker swarm.</p>
+                          <p class="text-muted">
+                            After code is built, it should go where it is supposed to. Tags beginning with
+                            the prefix "stage-" are deployed to our staging environment and accessible
+                            at a sub-domain that matches whatever comes after the dash. Commits tagged "www"
+                            are deployed to the production environment. Tag based deployments make testing
+                            and reverting a breeze.
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -462,7 +882,10 @@
                           <h4 class="subheading">The team knows what is going on.</h4>
                         </div>
                         <div class="timeline-body">
-                          <p class="text-muted">We use integrations and custom bots to make sure that our slack channels are updated with pertinent information for anything that goes right or wrong in our DevOps processes.</p>
+                          <p class="text-muted">
+                            We use integrations and custom bots to make sure that our slack channels are updated
+                            with pertinent information about anything that goes right or wrong in our DevOps processes.
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -501,11 +924,14 @@
                       </div>
                       <div class="timeline-panel">
                         <div class="timeline-heading">
-                          <h4>Code</h4>
+                          <h4>Code-Centric</h4>
                           <h4 class="subheading">It all starts with code.</h4>
                         </div>
                         <div class="timeline-body">
-                          <p class="text-muted">We start by understanding your code. Good infrastructure design requires an intimate understanding of the current and future needs of your software.</p>
+                          <p class="text-muted">
+                            We start by understanding your code. Great infrastructure design requires an intimate
+                            understanding of the current and future needs of your software.
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -515,11 +941,15 @@
                       </div>
                       <div class="timeline-panel">
                         <div class="timeline-heading">
-                          <h4>Balanced Requirements</h4>
+                          <h4>Balanced</h4>
                           <h4 class="subheading">We walk the tightrope.</h4>
                         </div>
                         <div class="timeline-body">
-                          <p class="text-muted">Balancing developer control of the environment that their software runs in with the stability and security requirements of well built infrastructure is a tightrope we know how to walk. We can show you how.</p>
+                          <p class="text-muted">
+                            Balancing developer control of the environment that their software runs in with the
+                            stability and security requirements of well built infrastructure is a tightrope
+                            we know how to walk. We can show you how.
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -533,7 +963,30 @@
                           <h4 class="subheading">Requirements, not suggestions.</h4>
                         </div>
                         <div class="timeline-body">
-                          <p class="text-muted">Scalability and high availability are requirements, not suggestions. The days of monolithic systems running monolithic software are over. Good riddance. We will design systems that are fault tolerant and horizontally scalable on whatever budget you have to work with.</p>
+                          <p class="text-muted">
+                            Scalability and high availability are requirements, not suggestions. The days of
+                            monolithic systems running monolithic software are over. Good riddance. We will
+                            design systems that are fault tolerant and horizontally scalable on whatever
+                            budget you have to work with.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-inverted">
+                      <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="https://media.interrobang.consulting/services/cloud_based.jpg" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>Cloud-Based</h4>
+                          <h4 class="subheading">Scaling out should be easy.</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">
+                            We've built and managed many racks of physical hardware. We don't recommend it. We prefer
+                            AWS and GCE. But we have worked with an assortment of cloud providers. We have the experience
+                            required to help you choose the provider that best matches your needs.
+                          </p>
                         </div>
                       </div>
                     </li>

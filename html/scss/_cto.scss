@@ -1,39 +1,39 @@
-// Styling for the services section
-.service-heading {
+// Styling for the ctos section
+.cto-heading {
   margin: 15px 0;
   text-transform: none;
 }
 
-#service {
-  .service-item {
+#cto {
+  .cto-item {
     @extend %modal-item;
 
-    .service-link {
+    .cto-link {
       @extend %modal-link;
 
-      .service-hover {
+      .cto-hover {
         @extend %modal-hover;
 
-        .service-hover-content {
+        .cto-hover-content {
           @extend %modal-hover-content;
         }
       }
     }
 
-    .service-caption {
+    .cto-caption {
       @extend %modal-caption;
     }
   }
 }
 
 @media(min-width: 767px) {
-  #service {
-    .service-item {
+  #cto {
+    .cto-item {
       margin: 0 0 30px;
     }
   }
 }
 
-.service-modal {
+.cto-modal {
   @extend %modal-modal;
 }

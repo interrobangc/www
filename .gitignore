@@ -16,3 +16,4 @@ Thumbs.db
 # Sass
 *.css.map
 html/.sass-cache
+html/full

@@ -4,7 +4,7 @@ IMAGE_BASE = interrobangc
 IMAGE = www
 MY_PWD = $(shell pwd)
 
-all: githooks build up
+all: githooks build up logs
 
 sass:
 	docker run --rm -v $(MY_PWD)/html:/app/ --name interrobangc-www-sass interrobangc/sass sass --style expanded scss/interrobang.scss css/interrobang.css
@@ -16,22 +16,22 @@ build:
 	docker build -t $(IMAGE_BASE)/$(IMAGE) -f $(MY_PWD)/Dockerfile $(MY_PWD)
 
 up:
-	docker-compose up -d
+	docker-compose -p $(IMAGE_BASE) up -d
 
 start:
-	docker-compose start
+	docker-compose -p $(IMAGE_BASE) start
 
 stop:
-	docker-compose stop
+	docker-compose -p $(IMAGE_BASE) stop
 
 down:
-	docker-compose down
+	docker-compose -p $(IMAGE_BASE) down
 
 logs:
-	docker-compose logs -f
+	docker-compose -p $(IMAGE_BASE) logs -f
 
 shell:
-	docker-compose exec www sh
+	docker-compose -p $(IMAGE_BASE) exec www sh
 
 lint-sass:
 	docker run --rm -v $(MY_PWD):/app --name interrobangc-www-test-sass interrobangc/sass-lint
