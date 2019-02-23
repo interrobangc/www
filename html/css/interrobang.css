@@ -550,7 +550,7 @@ ul.social-buttons li a {
   -moz-transition: all .3s;
   transition: all .3s;
   color: #fff;
-  border-radius: 100%;
+  border-radius: 10%;
   outline: none;
   background-color: #212529;
 }
