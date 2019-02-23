@@ -15,6 +15,19 @@ githooks:
 build:
 	docker build -t $(IMAGE_BASE)/$(IMAGE) -f $(MY_PWD)/Dockerfile $(MY_PWD)
 
+deploy-tag:
+	tag="$(TAG)"; \
+	if [ "$${tag-}" ]; then \
+		echo "deploying tag: $$tag"; \
+		git push --delete origin stage-$$tag; \
+		git tag -d stage-$$tag; \
+		git tag stage-$$tag; \
+		git push origin stage-$$tag; \
+	else \
+		echo "you must provide a tag with TAG=some-tag-name"; \
+		exit 1; \
+	fi;
+
 up:
 	docker-compose -p $(IMAGE_BASE) up -d
 
