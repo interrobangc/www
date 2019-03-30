@@ -178,6 +178,7 @@ header.masthead {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
+  height: 100vh;
 }
 header.masthead .intro-text {
   padding-top: 150px;
@@ -511,7 +512,6 @@ header.masthead .intro-text .intro-heading {
   border: 7px solid #fff;
 }
 .team-member h4 {
-  margin-top: 25px;
   margin-bottom: 0;
   text-transform: none;
 }
